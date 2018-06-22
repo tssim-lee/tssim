@@ -1,76 +1,90 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="utf-8">
 	<title>Сайт не о чем</title>
 
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
+
 <body>
 
 
 	<header class="header">
-		<div class = "m">
-		<div class="container">
-			<a href="/" class="navbar-brand logo">Скоро открытие</a>
-				<nav>	
+		<div class="m">
+			<div class="container">
+				<a href="/" class="navbar-brand logo">Скоро открытие</a>
+				<nav>
 					<ul class="menu">
-						<li><a href="/">Начало</a></li>
-						<li><a href="/">блог</a></li>
-						<li id="cl_obaut"><a  href="#">контакты</a></li>
+						<li>
+							<a href="/">Начало</a>
+						</li>
+						<li>
+							<a href="/">блог</a>
+						</li>
+						<li id="cl_obaut">
+							<a href="#">контакты</a>
+						</li>
 					</ul>
 				</nav>
 
-		</div>
-		</div>
-
-<div class="obaut"> <label class="fff"> <h3> наши контакты:</h3> 
-Мы всегда рады видеть всех. Приходите в гости к нам.  Наш адресс не дом и не улица. Мы просто бездельники.</label></div>
-
-		
-	<div class="container">
-			<div class="content">
-					<h1>Скоро открытие того что никто не ждёт</h1>
-					<h3 id="cont">Сайт, который никому не нужен, потому что он не интересен, скучен и глуп. Новости, которые знают все. Торопитесь, места не ограничены. </h3>
-					<h3 id="text2">Вижу Вам тоже нравиться нажимать на кнопки?</h3>
 			</div>
 		</div>
-		<a href="#" class="button"> Да я жду открытия 	<%=count.number%></a><hr>
-	</header> 
-<!------------------------------------------------------->
+
+		<div class="obaut">
+			<label class="fff">
+				<h3> наши контакты:</h3>
+				Мы всегда рады видеть всех. Приходите в гости к нам. Наш адресс не дом и не улица. Мы просто бездельники.</label>
+		</div>
+
+
+		<div class="container">
+			<div class="content">
+				<h1>Скоро открытие того что никто не ждёт</h1>
+				<h3 id="cont">Сайт, который никому не нужен, потому что он не интересен, скучен и глуп. Новости, которые знают все. Торопитесь, места
+					не ограничены. </h3>
+				<h3 id="text2">Вижу Вам тоже нравиться нажимать на кнопки?</h3>
+			</div>
+		</div>
+		<a href="#" class="button"> Да я жду открытия
+			<%=count.rows[0].number%>
+		</a>
+		<hr>
+	</header>
+	<!------------------------------------------------------->
 
 	<div class="main">
 		<div class="container">
 			<div>
 				<h1>Здравствуй, гость!</h1>
 
-			<h4>Даже не знаю что тебе предложить сегодня.</h4>
+				<h4>Даже не знаю что тебе предложить сегодня.</h4>
 
 			</div>
 			<div class="sidebar">
-				
+
 			</div>
 		</div>
 	</div>
 
 
-<!---------------------------------------------------------->
+	<!---------------------------------------------------------->
 
 
 	<footer class="footer">
 		<div class="container">
-			<hr>
-			Конечно все данные тут. И зачем они нужны...
-			<hr>
-			До встречи.
+			<hr> Конечно все данные тут. И зачем они нужны...
+			<hr> До встречи.
 		</div>
 	</footer>
 
 
 
 
- <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="./js/javascript.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="./js/javascript.js"></script>
 </body>
+
 </html>

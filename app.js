@@ -7,7 +7,6 @@ const control = require('./controllers');
 
 
 const bd = b_d((bd) => {
-
     ///////////////////////////////////////////////////////////////
     app.listen(config.PORT, () => { //--------------------------///
         console.log(`${bd} к  порту  ${config.PORT}`); /////
@@ -16,6 +15,7 @@ const bd = b_d((bd) => {
 
 });
 
+bd.connect();
 
 app.get('/', (req, res) => {
     control.c(res, bd);

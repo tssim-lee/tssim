@@ -2,19 +2,36 @@
 const fs = require('fs');
 
 /////////////////////////////////////
-function couNT(res, bd) {
+function couNT(res, client) {
     let playlistId = 1;
-    bd.get('SELECT * FROM tbl WHERE id = ?', [playlistId], (err, results) => {
-        res.render('index', {
-            count: results
-        });
-        let i = results.number;
-        i += 1;
-        bd.get('UPDATE tbl SET number =? WHERE id=1', [i]);
 
+
+    client.query('SELECT * FROM tbl WHERE id =($1)', [playlistId], (err, results) => {
+        if (err) {
+            console.log(err.stack);
+        } else {
+            console.log(results.rows[0].number);
+            res.render('index', {
+                count: results
+            });
+            let i = results.rows[0].number + 1;
+
+
+
+            client.query('UPDATE tbl SET number =$1 WHERE id=1', [i], (err) => {
+                if (err) {
+                    console.log(err.stack);
+                } else {
+                    client.end();
+                }
+
+
+            });
+
+        }
     });
-}
 
+}
 ///////////////////////////////////////////////////
 function logConnect(argument) {
 
