@@ -15,8 +15,6 @@ const bd = b_d((bd) => {
 
 });
 
-bd.connect();
-
 app.get('/', (req, res) => {
     control.c(res, bd);
     control.l(req.ip);

@@ -13,8 +13,8 @@ const client = new Client({
 
 
 module.exports = (ar) => {
-    ar('Подключение');
     client.connect();
+    ar('Подключение');
     return client;
 
 }
