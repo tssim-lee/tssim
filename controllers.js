@@ -12,7 +12,7 @@ function couNT(res, client) {
         } else {
             console.log(results.rows[0].number);
             res.render('index', {
-                count: results
+                count: results,
             });
             let i = results.rows[0].number + 1;
 
@@ -22,7 +22,7 @@ function couNT(res, client) {
                 if (err) {
                     console.log(err.stack);
                 } else {
-                    // client.end();
+                    //client.end();
                 }
 
 
