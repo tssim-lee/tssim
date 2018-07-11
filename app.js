@@ -23,6 +23,9 @@ app.get('/', (req, res) => {
 
 });
 
+app.get('/blogSA', (req, res) => {
+    control.b(res, bd);
+})
 app.post('/api/auth/post', (req, res) => {
     setUser(bd, req, res);
 

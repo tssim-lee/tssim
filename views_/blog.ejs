@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Сайт не о чем</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+
+<body>
+
+
+
+    <header class="header" style="background-image: none">
+        <div class="m">
+            <div class="container">
+                <a href="/" class="navbar-brand logo">Скоро открытие</a>
+                <nav>
+                    <ul class="menu">
+                        <li>Привет
+
+                        </li>
+                        <li>
+                            <a href="/" data-toggle="modal" data-target="#myModal">Регистрация</a>
+                        </li>
+                        <li>
+                            <a href="/blog">блог</a>
+                        </li>
+                        <li id="cl_obaut">
+                            <a href="#">контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+
+        <div class="obaut">
+            <label class="fff">
+                <h3> наши контакты:</h3>
+                Мы всегда рады видеть всех. Приходите в гости к нам. Наш адресс не дом и не улица. Мы просто бездельники.</label>
+        </div>
+
+    </header>
+
+    <div class="main">
+        <div class="container">
+            <div>
+                <h1>Здравствуй, гость!</h1>
+
+                <h4>Даже не знаю что тебе предложить сегодня.</h4>
+
+            </div>
+            <div class="sidebar">
+
+            </div>
+        </div>
+
+
+        <div class="container" style="width: 33%;">
+
+            <div style="margin-top: 4rem;">
+                <ul style="">
+                    <% for( var i=0; i < content.rows.length; i++) { %>
+
+                        <li style="text-align: left; font-size: 1.75rem">
+                            <%= content.rows[i].id  %>
+                                <%= content.rows[i].login  %>
+                                    <%= content.rows[i].email  %>
+                        </li>
+
+                        <% } %>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <hr> Конечно все данные тут. И зачем они нужны...
+            <hr> До встречи.
+        </div>
+    </footer>
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Модальное окно -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light" style="">
+                    <h4 class="modal-title" id="myModalLabel">Регистрация</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/post" method="POST">
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Логин</label>
+                            <input type="text" class="form-control" id="recipient-name0">
+                            <h8></h8>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Ваш Email:</label>
+                            <input type="text" class="form-control" id="recipient-name" value="Email">
+                            <h8 class='email'></h8>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Пароль:</label>
+                            <input name="password" type="text" class="form-control" id="recipient-name1">
+                            <h8></h8>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Отправить</button>
+                    </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript" src="./jscript/jquery.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+
+
+        <script type="text/javascript" src="./jscript/jquery.min.js"></script>
+        <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./js/javascript.js"></script>
+</body>
+
+</html>

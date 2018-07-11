@@ -1,6 +1,26 @@
 /*jshint esversion: 6 */
 const fs = require('fs');
 
+
+/////////////////////////////////////
+function couBLOG(res, blogs) {
+
+    blogs.query('SELECT * FROM tbl_users', (err, results) => {
+        if (err) {
+            console.log(err.stack);
+        } else {
+            console.log(results);
+            res.render('blog', {
+                content: results
+            });
+
+
+        }
+    });
+
+}
+///////////////////////////////////////////////////
+
 /////////////////////////////////////
 function couNT(res, client) {
     let playlistId = 1;
@@ -45,5 +65,5 @@ function logConnect(argument) {
 
 ////////////////////////////////////////////
 module.exports.c = couNT;
-
+module.exports.b = couBLOG;
 module.exports.l = logConnect;
